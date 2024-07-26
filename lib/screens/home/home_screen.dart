@@ -1,0 +1,47 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:govint/buttons/buttons.dart';
+import 'package:govint/dimensions/colors.dart';
+
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      key: _scaffoldKey,
+      appBar: PreferredSize(
+          preferredSize: const Size.fromHeight(62),
+          child: AppBar(
+            backgroundColor: Colors.red,
+            automaticallyImplyLeading: false,
+            titleSpacing: 0.0,
+            title: Padding(
+              padding:
+                  EdgeInsets.only(left: 0.03.sw, right: 0.03.sw, top: 0.01.sh),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  DrawerButtonComponent(
+                      onTap: () => _scaffoldKey.currentState?.openDrawer())
+                ],
+              ),
+            ),
+          )),
+      drawer: Drawer(
+        backgroundColor: GColors.lightWhite,
+        surfaceTintColor: GColors.lightWhite,
+        shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
+        width: 0.9.sw,
+      ),
+    );
+  }
+}
