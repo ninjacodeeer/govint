@@ -84,8 +84,7 @@ class _HistoryWidgetComponentState extends State<HistoryWidgetComponent> {
 
 class SiteIconWidgetComponent extends StatefulWidget {
   final String siteIcon;
-
-  const SiteIconWidgetComponent({super.key, required this.siteIcon});
+  SiteIconWidgetComponent({super.key, required this.siteIcon} );
 
   @override
   State<SiteIconWidgetComponent> createState() =>

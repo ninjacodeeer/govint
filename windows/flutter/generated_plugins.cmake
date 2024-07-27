@@ -3,6 +3,8 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
+  list_all_videos
+  permission_handler_windows
 )
 
 list(APPEND FLUTTER_FFI_PLUGIN_LIST

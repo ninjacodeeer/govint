@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:govint/app/app.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   const app = GovintApp();
   runApp(app);
 }

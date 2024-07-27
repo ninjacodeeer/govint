@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:govint/dimensions/colors.dart';
 import 'package:govint/navigations/routes/routers.dart';
 
 class GovintApp extends StatelessWidget {
@@ -14,6 +15,7 @@ class GovintApp extends StatelessWidget {
       builder: (context, child) {
         return MaterialApp.router(
           debugShowCheckedModeBanner: false,
+          theme: ThemeData(scaffoldBackgroundColor: GColors.white),
           routerConfig: routers,
         );
       },
