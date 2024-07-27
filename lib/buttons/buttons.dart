@@ -5,6 +5,7 @@ import 'package:govint/dimensions/icons.dart';
 
 class DrawerButtonComponent extends StatefulWidget {
   final VoidCallback onTap;
+
   const DrawerButtonComponent({super.key, required this.onTap});
 
   @override

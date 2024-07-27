@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:govint/buttons/buttons.dart';
 import 'package:govint/dimensions/colors.dart';
+import 'package:govint/widgets/tab_bar_widget/drawer_tab_bar_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -37,10 +39,11 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           )),
       drawer: Drawer(
-        backgroundColor: GColors.lightWhite,
-        surfaceTintColor: GColors.lightWhite,
+        backgroundColor: GColors.white,
+        surfaceTintColor: GColors.white,
         shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
         width: 0.9.sw,
+        child: const DrawerTabBarWidgetComponent(),
       ),
     );
   }
